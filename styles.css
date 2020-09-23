@@ -1,0 +1,363 @@
+
+/* @font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/BooterZeroZero.woff") format("woff")
+        url("Fonts/BooterZeroZero.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+} */
+
+*{
+    /* size of the element is determined by the padding and the margin as 
+    well as the size of the content */
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777777;
+}
+/* css styles are being defaulted to elements such as html or body */
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+/* still have a margin on the top cz of default margin of UL */
+/* to indicate only ul inside of nav has no margin */
+.nav ul {
+     margin: 0;
+}
+/* ____________________________________________________________________________ */
+.nav li{
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* ____________________________________________________________________________ */
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+/* ____________________________________________________________________________ */
+
+.main-header {
+    /* black with 60% transparency */
+    background-color: rgba(0, 0, 0, .6); 
+    background-image: url("images/Header Background.jpg");
+    /* usually only one background property can be used. Therefore 
+    blend two background properties */
+    background-blend-mode: multiply;
+    /* expand as taller and wider as it can till it hit the edge*/
+    background-size: cover;
+    padding-bottom: 30px;
+}
+/* ____________________________________________________________________________ */
+
+.band-name {
+    text-align: center;
+    /* h1 by defulat have margins */
+    margin: 0;
+    font-size: 4em;
+    /* font-family: "BooterZeroZero"; */
+    font-family: Pacifico;
+    font-weight: normal;
+    color: rgba(255, 255, 255);
+}
+
+.band-name-large{
+    font-size: 8em;
+}
+/* ____________________________________________________________________________ */
+.content-section{
+    margin: 1em;
+}
+
+.container{
+    max-width: 900px;
+    /* auto - left and right will adjust so text will be in center */
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header{
+    font-family: Combo;
+    font-weight: normal;
+    color: #333333;
+    text-align: center;
+    font-size: 2.5em;
+}
+/* ____________________________________________________________________________ */
+.about-band-image{
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+/* ____________________________________________________________________________ */
+.main-footer{
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ____________________________________________________________________________ */
+/* Index page */
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2d9cdb;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    /* buttons are not block level elements an only block level elements 
+    can have a margin. Therefore display:block */
+    margin: 0 auto;
+    color:  #2d9cdb;
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+/* ____________________________________________________________________________ */
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: 0.5em;
+}
+
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+
+/* inline-block adds a lil bit of width, therefore total is around 96% */
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+/* ____________________________________________________________________________ */
+/* Store page */
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+
+    width: 100%;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px; 
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333333;
+}
+
+.shop-items-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* ____________________________________________________________________________ */
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+/* ____________________________________________________________________________ */
+
+.cart-item-title {
+    color: #333333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #eb5757;
+    border: none;
+    border-radius: .3em;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;
+}
+
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
